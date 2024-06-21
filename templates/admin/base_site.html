@@ -1,0 +1,17 @@
+{% extends "admin/base.html" %}
+
+{% load static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+    <h1 id="site-name">
+        <a href="{% url 'admin:index' %}">
+            <img src="{% static 'entities/pythonlogo.png' %}" height="40px"/>
+            {#        <h1>"UMSRA Events Admin"</h1>#}
+        </a>
+        {{ site_header }}
+    </h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

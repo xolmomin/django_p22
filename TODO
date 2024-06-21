@@ -5,10 +5,16 @@ python3 manage.py createsuperuser
 python3 manage.py startapp apps
 
 
-
-https://bootdey.com/snippets/view/profile-with-followers-with-cover-photo
-https://bootdey.com/snippets/view/blog-post-grid-cards
-https://bootdey.com/snippets/view/General-Search-Results
-
+admin
+model fields
+class model meta
 
 
+mptt, ckeditor, import-export, jazzmin
+class based view
+
+
+https://books.agiliq.com/projects/django-admin-cookbook/en/latest/
+model field types
+model field options
+class model meta options
