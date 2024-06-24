@@ -1,39 +1,40 @@
 from django.db import models
 
+from django.db import models
+from mptt.models import MPTTModel, TreeForeignKey
+from django_ckeditor_5.fields import CKEditor5Field
 
-# Create your models here.
-class Category(models.Model):
-    name = models.CharField(max_length=100)
 
-    class Meta:
-        verbose_name_plural = "Categories"
+class Category(MPTTModel):
+    name = models.CharField(max_length=50)
+    parent = TreeForeignKey('self', models.CASCADE, null=True, blank=True, related_name='children')
+
+    class MPTTMeta:
+        order_insertion_by = ['name']
 
     def __str__(self):
         return self.name
 
 
 class Origin(models.Model):
-    name = models.JSONField(verbose_name="shokir", max_length=100)
-    name = models.CharField(verbose_name="shokir", max_length=100)
+    name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
 
-# entities_entity
+
 class Entity(models.Model):
     class Gender(models.TextChoices):
         GENDER_MALE = 'male', "Male"
         GENDER_FEMALE = 'female', "Female"
 
     name = models.EmailField(max_length=100)
-    alternative_name = models.CharField(
-        max_length=100, null=True, blank=True
-    )
+    alternative_name = models.CharField(max_length=100, null=True, blank=True)
 
     category = models.ForeignKey(Category, models.CASCADE)
     origin = models.ForeignKey(Origin, models.CASCADE)
     gender = models.CharField(max_length=100, choices=Gender.choices)
-    description = models.TextField()
+    description = CKEditor5Field()
 
     def __str__(self):
         return self.name
