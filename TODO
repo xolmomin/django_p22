@@ -3,9 +3,21 @@ model fields
 class model meta
 
 
+#HOMEWORK
 https://bootdey.com/snippets/view/Shop-page
+1. category boyicha productlarni chiqarish
+2. pagination ishlidigan qilish
+3. price(low, high), newest boyicha order qilish
+4. product title va description boyicha search qilish
+5. product ni CRUD
+6. mptt ishlatgan holda, category ni ichma-ich qilish
+7. adminkada product qoshishda categoryni (bollari bolmagan category) ni tanlashi kk
+8. adminkada category qoshishda parent category ga producti bolmaganlar categoryni tanlash mn
+
+
 
 https://ccbv.co.uk/
+
 class based view
 CRUD
 
