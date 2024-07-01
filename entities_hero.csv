@@ -1,8 +1,0 @@
-id,name,alternative_name,gender,description,is_immortal,benevolence_factor,arbitrariness_factor,category_id,father_id,mother_id,spouse_id,origin_id
-1,noutbuk,laptoop,male,good,True,4,4,1,,,,1
-4,noutbuk,laptoop,male,good,False,4,4,1,,,,1
-7,noutbuk,laptoop,male,good,False,4,4,1,,,,1
-2,noutbuk,laptoop,male,good,False,4,4,1,,,,1
-5,noutbuk,laptoop,male,good,False,4,4,1,,,,1
-3,noutbuk,laptoop,male,good,True,4,4,1,,,,1
-9,noutbuk,laptoop,male,good,False,4,4,1,,,,1

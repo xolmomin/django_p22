@@ -31,3 +31,35 @@ https://books.agiliq.com/projects/django-admin-cookbook/en/latest/
 model field types
 model field options
 class model meta options
+
+
+
+
+
+
+
+
+
+
+
+
+Algorithm biz bilan birga rivojlantiring leetcode.com dan
+kamida 100ta misol ishlagan bo'lishi kerak, barcha pythonchilar uchun tekin.
+asosan o'tiladigan narsalar Data Structure and Algorithm (DSA), iloji boricha o'quvchilarni
+algorithm bo'yicha bilimlarini oshirish, leetcode da 400+ qilish.
+
+
+
+
+
+#HOMEWORK
+1. mptt(category), ckeditor(product description), import-export(product, category)
+2. product list page dagi (Showing 1-24 of 205 Products) shuni togri chiqadigan qilish kerak
+3. New nomli badge ni togri ishlidigan qilish
+4. product list page dagi productni categorysini bosgandan category ga tegishli productlarni chiqarish kk
+5. chap menyuda (cateogry lar listini chiqarishda), 2ta etapli qilish
+6. product detailda barcha narsalarni chiqarish kk
+
+
+
+
