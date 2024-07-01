@@ -31,3 +31,37 @@ https://books.agiliq.com/projects/django-admin-cookbook/en/latest/
 model field types
 model field options
 class model meta options
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#HOMEWORK
+1. mptt(category), ckeditor(product description), import-export(product, category)
+2. product list page dagi (Showing 1-24 of 205 Products) shuni togri chiqadigan qilish kerak
+3. New nomli badge ni togri ishlidigan qilish
+4. product list page dagi productni categorysini bosgandan category ga tegishli productlarni chiqarish kk
+5. chap menyuda (cateogry lar listini chiqarishda), 2ta etapli qilish
+6. product detailda barcha narsalarni chiqarish kk
+
+
+
+
+login,register,celery,email,updateview,createview, loginview, logoutview
+
+
+#HOMEWORK
+1. user login qilmagan bolsa default image korsatish
+2.
+
+
+10.10.2.174
