@@ -1,6 +1,8 @@
 import import_export
 from django.contrib import admin
+from django.db.models import F
 from import_export.admin import ImportExportModelAdmin
+from mptt.admin import DraggableMPTTAdmin
 
 from apps.models import Product, ProductImage, Category
 
@@ -16,6 +18,13 @@ class ProductModelAdmin(admin.ModelAdmin):
     list_display = 'name', 'get_in_stock', 'price'
     inlines = [ProductImageStackedInline]
 
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == "category":
+            # kwargs["queryset"] = Category.objects.filter(children__isnull=True)
+            kwargs["queryset"] = Category.objects.filter(lft=F('rght') - 1)
+            # kwargs["queryset"] = Category.objects.filter(rght=F('lft') + 1)
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
     @admin.action(description='Sotuvda bormi?')
     def get_in_stock(self, obj: Product):
         return obj.in_stock
@@ -24,5 +33,5 @@ class ProductModelAdmin(admin.ModelAdmin):
 
 
 @admin.register(Category)
-class CategoryModelAdmin(ImportExportModelAdmin):
+class CategoryModelAdmin(DraggableMPTTAdmin, ImportExportModelAdmin):
     pass

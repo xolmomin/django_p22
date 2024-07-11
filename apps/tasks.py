@@ -8,3 +8,4 @@ from root import settings
 def send_to_email(msg: str, email: str):
     subject = 'Tema'
     send_mail(subject, msg, settings.EMAIL_HOST_USER, [email])
+    return {'success': True, 'email': email}

@@ -1,13 +1,12 @@
 from django.contrib.auth import logout
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DetailView, UpdateView, CreateView
 
 from apps.forms import UserRegisterModelForm
-from apps.models import Product, Category
+from apps.models import Product, Category, User
 from apps.tasks import send_to_email
 
 

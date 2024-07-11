@@ -61,7 +61,19 @@ login,register,celery,email,updateview,createview, loginview, logoutview
 
 #HOMEWORK
 1. user login qilmagan bolsa default image korsatish
-2.
+2. order modelini yozish (orderitem), cart, favorite
+3. shopping-cart va checkout page larini qilish
+
+4. order page qilinsin
 
 
-10.10.2.174
+
+docker run --name redis_container -p 6379:6379 -d redis:alpine
+docker run --name rabbitmq_container -p 5672:5672 -d rabbitmq:3-management
+
+
+
+
+
+
+

@@ -22,6 +22,9 @@ INSTALLED_APPS = [
     'apps',
     'django_ckeditor_5',
     'import_export',
+    'django_celery_results',
+    'django_celery_beat',
+    'mptt',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +56,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "root.wsgi.application"
+AUTH_USER_MODEL = 'apps.User'
 
 DATABASES = {
     "default": {
@@ -85,7 +89,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Tashkent"
 
 USE_I18N = True
 
@@ -206,6 +210,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.getenv('USER_EMAIL')
 EMAIL_HOST_PASSWORD = os.getenv('PASSWORD_EMAIL')
 
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-
-# rabbitmq, kafka, redis
+# CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
+CELERY_RESULT_BACKEND = 'django-db'
