@@ -74,6 +74,23 @@ docker run --name rabbitmq_container -p 5672:5672 -d rabbitmq:3-management
 
 
 
+1. project scp
+2. github git clone
+
+nginx, service, ssl, domain
+
+django + celery + redis
+
+docker compose
+ci/cd
+ - git bash
+ - docker
++ telegram bot
+
+drf
 
 
 
+
+docker build -t django_image .
+docker run --name django_container -p 8000:8000 -d django_image

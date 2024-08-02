@@ -22,8 +22,8 @@ INSTALLED_APPS = [
     'apps',
     'django_ckeditor_5',
     'import_export',
-    'django_celery_results',
-    'django_celery_beat',
+    # 'django_celery_results',
+    # 'django_celery_beat',
     'mptt',
 ]
 
@@ -60,12 +60,12 @@ AUTH_USER_MODEL = 'apps.User'
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": os.getenv('PG_NAME'),
-        "USER": os.getenv('PG_USER'),
-        "PASSWORD": os.getenv('PG_PASSWORD'),
-        "HOST": os.getenv('PG_HOST'),
-        "PORT": os.getenv('PG_PORT')
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / 'db.sqlite3',
+        # "USER": os.getenv('PG_USER'),
+        # "PASSWORD": os.getenv('PG_PASSWORD'),
+        # "HOST": os.getenv('PG_HOST'),
+        # "PORT": os.getenv('PG_PORT')
     }
 }
 
@@ -211,5 +211,5 @@ EMAIL_HOST_USER = os.getenv('USER_EMAIL')
 EMAIL_HOST_PASSWORD = os.getenv('PASSWORD_EMAIL')
 
 # CELERY_BROKER_URL = 'redis://localhost:6379/0'
-CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
-CELERY_RESULT_BACKEND = 'django-db'
+# CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
+# CELERY_RESULT_BACKEND = 'django-db'
