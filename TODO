@@ -94,3 +94,17 @@ drf
 
 docker build -t django_image .
 docker run --name django_container -p 8000:8000 -d django_image
+docker run -e POSTGRES_PASSWORD=1 -v new_pg_data:/var/lib/postgresql/data -p 5439:5432 -d postgres:alpine
+
+
+
+docker compose up
+docker compose up --build
+
+
+
+docker compose exec postgres_service psql|bash|sh
+
+/var/lib/postgresql/data/postgresql.conf
+
+

@@ -1,8 +1,5 @@
 import os.path
 from pathlib import Path
-from dotenv import load_dotenv
-
-load_dotenv('.env')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -60,12 +57,12 @@ AUTH_USER_MODEL = 'apps.User'
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / 'db.sqlite3',
-        # "USER": os.getenv('PG_USER'),
-        # "PASSWORD": os.getenv('PG_PASSWORD'),
-        # "HOST": os.getenv('PG_HOST'),
-        # "PORT": os.getenv('PG_PORT')
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": os.getenv('PG_NAME'),
+        "USER": os.getenv('PG_USER'),
+        "PASSWORD": os.getenv('PG_PASSWORD'),
+        "HOST": os.getenv('PG_HOST'),
+        "PORT": os.getenv('PG_PORT')
     }
 }
 
