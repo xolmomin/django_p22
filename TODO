@@ -108,3 +108,37 @@ docker compose exec postgres_service psql|bash|sh
 /var/lib/postgresql/data/postgresql.conf
 
 
+
+linux cmd
+
+
+docker file
+1 host 1 container
+
+docker compose
+1 host n container
+
+docker swarm, k8s
+n host n container
+
+
+
+
+
+
+
+django          +
+postgres        +
+redis           +
+celery          +
+celery-beat     +
+flower          +
+rabbitmq
+mongodb
+
+minio
+
+nginx
+
+
+watch
